@@ -1,7 +1,7 @@
 name: mega_test
 
 environment:
-  sdk: '^3.3.0-135.0.dev'
+  sdk: '^3.3.0-0.dev'
 
 dependencies:
   ffi: any
