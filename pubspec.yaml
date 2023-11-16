@@ -1,0 +1,16 @@
+name: mega_test
+
+dependencies:
+  ffi: any
+  path: any
+  vector_math: any
+  vm_service: any
+  flutter:
+    sdk: flutter
+  flutter_test:
+    sdk: flutter
+  flutter_goldens:
+    sdk: flutter
+  leak_tracker: any
+  leak_tracker_flutter_testing: any
+  test_core: any
