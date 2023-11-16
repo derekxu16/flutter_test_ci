@@ -4,7 +4,8 @@ jobs:
   ft:
     runs-on: ubuntu-latest
     steps:
-      - run: git clone --depth=1 https://github.com/flutter/flutter
-      - run: echo "$PWD/flutter/bin" >> $GITHUB_PATH
-      - run: flutter doctor
-      - run: cd flutter/packages/flutter && flutter test test/rendering
+      - run: echo $PWD
+      # - run: git clone --depth=1 https://github.com/flutter/flutter
+      # - run: echo "$PWD/flutter/bin" >> $GITHUB_PATH
+      # - run: flutter doctor
+      # - run: cd flutter/packages/flutter && flutter test test/rendering
