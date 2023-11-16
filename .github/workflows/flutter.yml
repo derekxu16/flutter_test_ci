@@ -7,6 +7,6 @@ jobs:
       - run: echo $PWD
       - run: git clone --depth=1 https://github.com/flutter/flutter
       - run: echo "$PWD/flutter/bin" >> $GITHUB_PATH
-      - run: flutter pub get
-      - run: flutter/bin/dart --disable-dart-dev flutter/bin/cache/artifacts/engine/linux-x64/frontend_server.dart.snapshot --packages .dart_tool/package_config.json --sdk-root flutter/bin/cache/artifacts/engine/common/flutter_patched_sdk --target flutter --output-dill mega_test.dart.dill mega_test.dart
-      - run: FLUTTER_ROOT=$PWD/flutter FLUTTER_TEST=true ./flutter_tester --disable-observatory --use-test-fonts --disable-asset-fonts --flutter-assets-dir=. --icu-data-file-path=$PWD/icudtl.dat mega_test.dart.dill
+      - run: flutter pub get --directory $PWD
+      - run: flutter/bin/dart --disable-dart-dev $PWD/flutter/bin/cache/artifacts/engine/linux-x64/frontend_server.dart.snapshot --packages $PWD/.dart_tool/package_config.json --sdk-root $PWD/flutter/bin/cache/artifacts/engine/common/flutter_patched_sdk --target flutter --output-dill $PWD/mega_test.dart.dill $PWD/mega_test.dart
+      - run: FLUTTER_ROOT=$PWD/flutter FLUTTER_TEST=true $PWD/flutter_tester --disable-observatory --use-test-fonts --disable-asset-fonts --flutter-assets-dir=$PWD --icu-data-file-path=$PWD/icudtl.dat $PWD/mega_test.dart.dill
