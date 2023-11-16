@@ -1,0 +1,7 @@
+name: Regular Flutter Test
+on: [push]
+jobs:
+  ft:
+    runs-on: ubuntu-latest
+    steps:
+      - run: git clone https://github.com/flutter/flutter
